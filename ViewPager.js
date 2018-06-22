@@ -64,7 +64,7 @@ var ViewPager = createReactClass({
   getInitialState() {
     return {
       currentPage: 0,
-      viewWidth: this.props.containerWidth ||  0,
+      viewWidth: this.props.containerWidth || 0,
       scrollValue: new Animated.Value(0)
     };
   },
@@ -268,10 +268,10 @@ var ViewPager = createReactClass({
         bodyComponents.push(this._getPage(this.state.currentPage - 1));
         pagesNum++;
         hasLeft = true;
-        if (this.state.currentPage > 1) {
-          bodyComponents.push(this._getPage(this.state.currentPage - 2));
-          pagesNum++;
-        }
+        // if (this.state.currentPage > 1) {
+        //   bodyComponents.push(this._getPage(this.state.currentPage - 2));
+        //   pagesNum++;
+        // }
       }
       // else if (this.state.currentPage == 0 && this.props.isLoop) {
       //   bodyComponents.push(this._getPage(pageIDs.length - 1, true));
